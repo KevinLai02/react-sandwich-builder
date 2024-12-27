@@ -85,8 +85,8 @@ function App() {
         magic randomizer
       </button>
       <div style={{display: 'flex'}}>
-        {ingredientList.map(( item: string )=>(
-          <div style={{display: 'flex', flexDirection: 'column', margin: '10px', justifyContent: 'center'}}>
+        {ingredientList.map(( item: string, index: number )=>(
+          <div key={index} style={{display: 'flex', flexDirection: 'column', margin: '10px', justifyContent: 'center'}}>
             <div>{item}</div>
             <button onClick={() => {
                 add(item)
@@ -98,8 +98,8 @@ function App() {
       </div>
       <div style={{color: "red"}}>{warning}</div>
       <div>
-        {sandwich.map(( item: string )=>(
-            <div>{item}</div>
+        {sandwich.map(( item: string, index: number )=>(
+            <div key={index} >{item}</div>
         ))}
       </div>
     </div>
